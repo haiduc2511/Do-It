@@ -51,6 +51,8 @@ public class RecyclerItemTouchHelper extends ItemTouchHelper.SimpleCallback {
                 }
             });
             AlertDialog dialog = builder.create();
+            dialog.setCancelable(false);
+            dialog.setCanceledOnTouchOutside(false);
             dialog.show();
         } else {
             adapter.editItem(position);
